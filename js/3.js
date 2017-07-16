@@ -30,8 +30,8 @@ buttonPush.addEventListener('click', pushAddEnd);
 var arr1 = [];
 function arrOut(){
 	var p = document.getElementById('out');
-	for (var i = 0; i < arr1.length; i++){
-	}
+	// for (var i = 0; i < arr1.length; i++){
+	// }
 
  arr1 [inputArrayIndex.value] = inputArrayValue.value;
 p.textContent = arr1 + " Последние изменения: "+ ' длина массива = '+ arr1.length  + " индекс: " + inputArrayIndex.value +" значение: " + inputArrayValue.value;

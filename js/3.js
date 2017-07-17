@@ -18,44 +18,42 @@ buttonPop.addEventListener('click', popRemoveLastElement);
 buttonShift.addEventListener('click', shiftRemoveFirsElement);
 buttonPush.addEventListener('click', pushAddEnd);
 
-//------создание нового элемента <p> --------------
+//-----------------------------------------
 
- // let newP = document.createElement('p');
- //  newP.className = "out";
- //  newP.textContent = "Вывод массива: " + inputArrayValue.value;
- //  document.body.appendChild(newP);
-//---------------------------------------------
+let arr1 = [];
+let p = document.getElementById('new');
+
+//------------------------------------------
+function add (arr){
+	p.textContent = arr;
+}
 
 //-----------ф-я вывода--------------------
-var arr1 = [];
 function arrOut(){
-	var p = document.getElementById('out');
-	// for (var i = 0; i < arr1.length; i++){
-	// }
 
  arr1 [inputArrayIndex.value] = inputArrayValue.value;
-p.textContent = arr1 + " Последние изменения: "+ ' длина массива = '+ arr1.length  + " индекс: " + inputArrayIndex.value +" значение: " + inputArrayValue.value;
+ add (arr1);
 }
 
 //------ф-я добавляет значение в конец массива--------
 
 function pushAddEnd(){
 	arr1.push(inputArrayValue.value);
-	arrOut();
+	add (arr1);
 }
 
 //------ф-я удаляет значение в конце массива--------
 
 function popRemoveLastElement(){
 	arr1.pop();
-	arrOut();
+	add (arr1);
 }
 
 //------ф-я удаляет значение в начале массива--------
 
 function shiftRemoveFirsElement(){
 	arr1.shift();
-	arrOut();
+	add (arr1);
 }
 
 //------------------------------------------------
